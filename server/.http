@@ -1,3 +1,21 @@
 GET http://localhost:3333/users HTTP/1.1
 
 ###
+
+POST http://localhost:3333/classes HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Diego Fernandes",
+  "avatar": "https://avatars.githubusercontent.com/u/47369269?s=60&u=8643e984e2d728257eef8d1424e4012b30bfcc86&v=4",
+  "whatsapp": "88981861554",
+  "bio": "akkafsdjflakd kajsdfsad",
+  "subject": "Matemática",
+  "cost": 80,
+  "schedule": [
+    { "week_day": 1, "from": "8:00", "to": "12:00"},
+    { "week_day": 3, "from": "10:00", "to": "18:00"},
+    { "week_day": 4, "from": "8:00", "to": "12:00"}
+  ]
+}
+###
