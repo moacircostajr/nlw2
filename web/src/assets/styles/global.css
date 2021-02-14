@@ -49,6 +49,7 @@ textarea {
   /* 1.6rem significa o aumento no tamanho da fonte em 60% */
   /* 1 rem = 9.6 pixels (com o font-size predefinido em 60%)*/
   font: 500 1.6rem Poppins;
+  color: var(--color-text-base);
 }
 
 .container {
