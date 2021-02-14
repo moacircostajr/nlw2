@@ -1,4 +1,4 @@
-GET http://localhost:3333/users HTTP/1.1
+GET http://localhost:3333/classes?week_day=0&subject=Matemática&time=9:00 HTTP/1.1
 
 ###
 
