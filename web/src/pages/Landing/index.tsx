@@ -1,5 +1,4 @@
 import React from 'react'
-// import '../../assets/styles/global.css' 1:06
 import logoImg from '../../assets/images/logo.svg'
 import landingImg from '../../assets/images/landing.svg'
 import studyIcon from '../../assets/images/icons/study.svg'

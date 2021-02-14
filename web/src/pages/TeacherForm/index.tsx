@@ -1,4 +1,5 @@
 import React from 'react'
+import PageHeader from '../../components/PageHeader'
 
 interface Props {
 
@@ -6,8 +7,8 @@ interface Props {
 
 const TeacherForm = (props: Props) => {
   return (
-    <div>
-      <h1>Teacher Form</h1>
+    <div id="page-teacher-form" className="container">
+      <PageHeader title="Que incrível que você quer dar aulas" />
     </div>
   )
 }
