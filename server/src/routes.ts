@@ -14,7 +14,7 @@ routes.post('/classes', async (request, response) => {
     schedule
   } = request.body
 
-  await db('users').insert({
+  const insertedUsersIds = await db('users').insert({
     // short syntax
     name,
     avatar,
@@ -22,7 +22,17 @@ routes.post('/classes', async (request, response) => {
     bio
   })
 
+  const user_id = insertedUsersIds[0]
+
+  await db('classes').insert({
+    subject,
+    cost,
+    user_id
+  })
+
   return response.send()
 })
 
 export default routes
+
+// 1:39
