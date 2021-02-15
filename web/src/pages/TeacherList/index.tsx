@@ -1,52 +1,54 @@
 import React from 'react'
 import PageHeader from '../../components/PageHeader'
-import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
 import './styles.css'
+import TeacherItem from '../../components/TeacherItem'
+import Input from '../../components/Input'
+import Select from '../../components/Select'
 
 const TeacherList = () => {
   return (
     <div className="container" id="page-teacher-list">
       <PageHeader title="Estes são os proffys disponíveis">
         <form action="" id="search-teachers">
-          <div className="input-block">
-            <label htmlFor="subject">Matéria</label>
-            <input type="text" id="subject" />
-          </div>
-          <div className="input-block">
-            <label htmlFor="week_day">Dia da semana</label>
-            <input type="text" id="week_day" />
-          </div>
-          <div className="input-block">
-            <label htmlFor="time">Hora</label>
-            <input type="text" id="time" />
-          </div>
+          <Select
+            name="subject"
+            label="Matéria"
+            options={[
+              { value: 'Artes', label: 'Artes' },
+              { value: 'Biologia', label: 'Biologia' },
+              { value: 'Ciências', label: 'Ciências' },
+              { value: 'Educação Física', label: 'Educação Física' },
+              { value: 'Física', label: 'Física' },
+              { value: 'Geografia', label: 'Geografia' },
+              { value: 'História', label: 'História' },
+              { value: 'Matemática', label: 'Matemática' },
+              { value: 'Português', label: 'Português' },
+              { value: 'Química', label: 'Química' }
+            ]}
+          />
+          <Select
+            name="week_day"
+            label="Dia da semana"
+            options={[
+              { value: '0', label: 'Domingo' },
+              { value: '1', label: 'Segunda-feira' },
+              { value: '2', label: 'Terça-feira' },
+              { value: '3', label: 'Quarta-feira' },
+              { value: '4', label: 'Quinta-feira' },
+              { value: '5', label: 'Sexta-feira' },
+              { value: '6', label: 'Sábado' },
+            ]}
+          />
+          <Input type="time" name="time" label="Hora" />
         </form>
       </PageHeader>
 
       <main>
-        <article className="teacher-item">
-          <header>
-            <img src="https://avatars.githubusercontent.com/u/47369269?s=60&u=8643e984e2d728257eef8d1424e4012b30bfcc86&v=4" alt="Moacir Costa" />
-            <div>
-              <strong>Moacir Costa</strong>
-              <span>Física</span>
-            </div>
-          </header>
-          <p>
-            Texto teste texto teste texto teste texto teste texto teste texto teste texto
-            Texto teste texto teste texto teste texto teste texto teste texto teste texto
-          </p>
-          <footer>
-            <p>
-              Preço/hora
-              <strong>R$ 80,00</strong>
-            </p>
-            <button type="button">
-              <img src={whatsappIcon} alt="Whatsapp" />
-              Entrar em contato
-            </button>
-          </footer>
-        </article>
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
       </main>
 
     </div>
