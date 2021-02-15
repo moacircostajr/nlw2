@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import './styles.css'
 import Input from '../../components/Input'
 import PageHeader from '../../components/PageHeader'
@@ -14,7 +15,7 @@ interface Schedule {
 }
 
 const TeacherForm = (props: any) => {
-
+  const history = useHistory()
   const [scheduleItems, setScheduleItems] = useState<Schedule[]>([
     { week_day: 0, from: '8:00', to: '16:00' },
     { week_day: 2, from: '10:00', to: '18:00' }
@@ -49,6 +50,7 @@ const TeacherForm = (props: any) => {
       schedule: scheduleItems
     }).then(() => {
       alert('Cadastro realizado com sucesso!')
+      history.push('/')
     }).catch(() => {
       alert('Erro no cadastro!')
     })
